@@ -81,16 +81,31 @@ export default async function ProjectPage({
       </header>
 
       {project.images.length > 0 ? (
-        <div className="mb-10 overflow-hidden rounded-2xl border border-white/10">
-          <Image
-            src={project.images[0]}
-            alt={`${project.title} preview`}
-            width={1600}
-            height={900}
-            priority
-            className="h-auto w-full object-cover"
-          />
-        </div>
+        project.portrait ? (
+          <div className="mb-10 flex justify-center">
+            <div className="relative w-full max-w-[360px] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/60 p-2 shadow-2xl shadow-cyan-500/10">
+              <Image
+                src={project.images[0]}
+                alt={`${project.title} preview`}
+                width={1080}
+                height={2120}
+                priority
+                className="h-auto w-full rounded-xl object-contain"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="mb-10 overflow-hidden rounded-2xl border border-white/10">
+            <Image
+              src={project.images[0]}
+              alt={`${project.title} preview`}
+              width={1600}
+              height={900}
+              priority
+              className="h-auto w-full object-cover"
+            />
+          </div>
+        )
       ) : (
         <LogoCover title={project.title} size="hero" />
       )}
@@ -135,6 +150,16 @@ export default async function ProjectPage({
               Links
             </h3>
             <div className="flex flex-col gap-3">
+              {project.liveUrl ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition-colors hover:border-cyan-400/50 hover:text-cyan-300"
+                >
+                  Live Demo
+                </a>
+              ) : null}
               {project.githubUrl ? (
                 <a
                   href={project.githubUrl}
@@ -173,13 +198,23 @@ export default async function ProjectPage({
                   key={image}
                   className="group/img overflow-hidden rounded-xl border border-white/10"
                 >
-                  <div className="relative aspect-[4/3]">
+                  <div
+                    className={`relative ${
+                      project.portrait
+                        ? "aspect-[3/4] bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/40 p-3"
+                        : "aspect-[4/3]"
+                    }`}
+                  >
                     <Image
                       src={image}
                       alt={caption ?? `${project.title} screenshot ${i + 2}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover/img:scale-105"
+                      className={`h-full w-full ${
+                        project.portrait
+                          ? "object-contain"
+                          : "object-cover transition-transform duration-300 group-hover/img:scale-105"
+                      }`}
                     />
                   </div>
                   {caption ? (

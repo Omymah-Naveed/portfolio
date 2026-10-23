@@ -62,9 +62,61 @@ export type Project = {
   logo?: string;
   linkedinUrl?: string;
   githubUrl?: string;
+  liveUrl?: string;
+  portrait?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    title: "Budgetly",
+    subtitle: "Full-Stack Personal Finance & Expense Tracker",
+    slug: "budgetly",
+    tech: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "JWT",
+      "REST API",
+    ],
+    description:
+      "A modern MERN stack financial management application built to track daily expenses, manage category budgets, and analyze spending patterns with real-time visual analytics.",
+    overview:
+      "Budgetly is a comprehensive personal finance web application designed to simplify money management. It empowers users to monitor their cash flow, set strict monthly spending limits across various categories, and view interactive performance reports. Built with a secure JWT authentication flow and responsive UI, Budgetly delivers a seamless, cross-device experience for tracking personal finances.",
+    highlights: [
+      "Secure User Authentication — protected JWT-based login and signup with encrypted bcrypt password storage",
+      "Dynamic Expense Tracking — real-time logging of incomes and expenses with automatic total balance calculations",
+      "Category Budgeting — interactive budget planner with live progress bars and alert indicators for threshold limits",
+      "Visual Data Analytics — multi-month spending charts and breakdown reports for accurate financial insights",
+      "Responsive Dark UI — sleek, user-friendly interface optimized for both desktop and mobile devices",
+    ],
+    images: [
+      "/projects/budgetly/01-login.png",
+      "/projects/budgetly/02-financial-dashboard.png",
+      "/projects/budgetly/03-spending-analytics.png",
+      "/projects/budgetly/04-add-transaction-popup.png",
+      "/projects/budgetly/05-settings-preferences.png",
+      "/projects/budgetly/06-settings-security.png",
+      "/projects/budgetly/07-budget-planner-overview.png",
+      "/projects/budgetly/08-category-budgets.png",
+      "/projects/budgetly/09-my-profile-details.png",
+    ],
+    captions: [
+      "Secure Authentication & JWT Login Screen",
+      "Financial Dashboard & Real-Time Balance Overview",
+      "Visual Spending Analytics & Performance Window",
+      "Income and Expense Logging Modal Interface",
+      "User Preferences, Currency & Data Export Options",
+      "Password Management & Account Security Settings",
+      "Monthly Budget Overview & Health Pulse Indicator",
+      "Category-wise Budget Limits & Tracking Bars",
+      "Personal Profile Information & Workspace Management",
+    ],
+    githubUrl: "https://github.com/Omymah-Naveed/Budgetly",
+    liveUrl: "https://budgetly-expense-tracker-app.vercel.app/",
+    portrait: true,
+  },
   {
     title: "Event Sphere",
     subtitle: "Expo Management System",

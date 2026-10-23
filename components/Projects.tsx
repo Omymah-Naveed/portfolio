@@ -14,7 +14,7 @@ export function Projects() {
           description="Real-world projects I have designed and built, end-to-end."
         />
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid items-start gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <Link
               key={project.title}
@@ -22,13 +22,23 @@ export function Projects() {
               className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 transition-all hover:-translate-y-1 hover:border-cyan-400/30 hover:shadow-xl hover:shadow-cyan-500/5"
             >
               {project.images.length > 0 ? (
-                <div className="relative aspect-video overflow-hidden border-b border-white/10">
+                <div
+                  className={`relative overflow-hidden border-b border-white/10 ${
+                    project.portrait
+                      ? "h-[26rem] bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/60 p-3"
+                      : "aspect-video"
+                  }`}
+                >
                   <Image
                     src={project.images[0]}
                     alt={`${project.title} preview`}
-                    width={800}
-                    height={450}
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    width={project.portrait ? 1080 : 800}
+                    height={project.portrait ? 2120 : 450}
+                    className={`h-full w-full ${
+                      project.portrait
+                        ? "object-contain"
+                        : "object-cover transition-transform duration-300 group-hover:scale-105"
+                    }`}
                   />
                 </div>
               ) : (
