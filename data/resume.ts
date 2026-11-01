@@ -7,7 +7,7 @@ export const profile = {
   email: "omymahnaveed94@gmail.com",
   linkedin: "https://linkedin.com/in/omymah-naveed-080756274",
   github: "https://github.com/Omymah-Naveed",
-  resumePdf: "/Omymah-Naveed.pdf",
+  resumePdf: "/Omymah-Naveed.pdf?v=2",
   summary:
     "Motivated Software Engineering student and Full Stack Developer with a strong creative edge in Adobe Photoshop and Illustrator. Hands-on experience in building scalable web applications using the MERN stack and SQL. Passionate about bridging the gap between clean backend logic, responsive frontend code, and high-quality visual design to deliver impactful user experiences.",
 };
