@@ -34,6 +34,7 @@ export function Projects() {
                     alt={`${project.title} preview`}
                     width={project.portrait ? 1080 : 800}
                     height={project.portrait ? 2120 : 450}
+                    unoptimized={project.unoptimizedImages}
                     className={`h-full w-full ${
                       project.portrait
                         ? "object-contain"

@@ -64,9 +64,75 @@ export type Project = {
   githubUrl?: string;
   liveUrl?: string;
   portrait?: boolean;
+  // Serve images as-is (already compressed). Useful for large galleries where
+  // the on-demand image optimizer would queue dozens of encodes at once.
+  unoptimizedImages?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    title: "AutoCare",
+    subtitle: "Car Service Booking & Management Platform",
+    slug: "autocare",
+    tech: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "JWT",
+      "Cloudinary",
+      "REST API",
+    ],
+    description:
+      "A full-stack MERN car care platform that lets customers book vehicle services with model-based pricing, track bookings in real time, and manage their accounts — backed by a complete admin dashboard.",
+    overview:
+      "AutoCare is an end-to-end car service platform built for modern workshops. Customers can browse a categorized service catalog with transparent hatchback, sedan and SUV pricing, pick a date and time slot, and receive an instant booking reference. A role-based admin panel gives the workshop full control over bookings, services, reviews, contact messages and business analytics, while JWT-secured accounts and email notifications keep the experience connected.",
+    highlights: [
+      "Smart booking flow — service selection, hatchback/sedan/SUV pricing, date & time-slot picker and instant booking reference",
+      "Live booking tracking — customers follow status from Pending to Confirmed and Completed, with cancellation reasons",
+      "Secure customer accounts — JWT authentication, profile management, booking history and email-based password reset",
+      "Admin command center — analytics dashboard, booking status control, and service CRUD with Cloudinary image uploads",
+      "PDF reports — downloadable service reports and admin overview exports powered by jsPDF",
+      "Reviews & engagement — customer ratings, contact inbox, notification bell and editable About page content",
+    ],
+    images: [
+      "/projects/autocare/01-home.webp",
+      "/projects/autocare/02-services.webp",
+      "/projects/autocare/03-service-detail.webp",
+      "/projects/autocare/04-booking-modal.webp",
+      "/projects/autocare/05-track-booking.webp",
+      "/projects/autocare/06-reviews.webp",
+      "/projects/autocare/07-about.webp",
+      "/projects/autocare/08-contact.webp",
+      "/projects/autocare/09-login-signup.webp",
+      "/projects/autocare/10-my-bookings.webp",
+      "/projects/autocare/11-admin-login.webp",
+      "/projects/autocare/12-admin-dashboard.webp",
+      "/projects/autocare/13-admin-bookings.webp",
+      "/projects/autocare/14-admin-services.webp",
+      "/projects/autocare/15-admin-reports.webp",
+    ],
+    captions: [
+      "Home — Hero Section",
+      "Service Menu & Transparent Pricing",
+      "Service Detail & Vehicle-Based Pricing",
+      "Multi-Step Booking Modal",
+      "Track Booking & Live Status Timeline",
+      "Customer Feedback & Reviews",
+      "About AutoCare",
+      "Contact Us",
+      "Login & Signup",
+      "Customer Profile & Booking History",
+      "Admin — Secure Login",
+      "Admin — Workshop Dashboard",
+      "Admin — Bookings Management",
+      "Admin — Service Management",
+      "Admin — Reports & Analytics",
+    ],
+    unoptimizedImages: true,
+    githubUrl: "https://github.com/Omymah-Naveed/AutoCare",
+    liveUrl: "https://autocare-autoservices.vercel.app/",
+  },
   {
     title: "Budgetly",
     subtitle: "Full-Stack Personal Finance & Expense Tracker",

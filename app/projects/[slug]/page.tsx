@@ -90,6 +90,7 @@ export default async function ProjectPage({
                 width={1080}
                 height={2120}
                 priority
+                unoptimized={project.unoptimizedImages}
                 className="h-auto w-full rounded-xl object-contain"
               />
             </div>
@@ -102,6 +103,7 @@ export default async function ProjectPage({
               width={1600}
               height={900}
               priority
+              unoptimized={project.unoptimizedImages}
               className="h-auto w-full object-cover"
             />
           </div>
@@ -210,6 +212,8 @@ export default async function ProjectPage({
                       alt={caption ?? `${project.title} screenshot ${i + 2}`}
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      unoptimized={project.unoptimizedImages}
+                      loading={project.unoptimizedImages ? "eager" : "lazy"}
                       className={`h-full w-full ${
                         project.portrait
                           ? "object-contain"
