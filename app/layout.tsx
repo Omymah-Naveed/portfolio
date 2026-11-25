@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Omymah Naveed | Full Stack Developer",
   description:
-    "Portfolio of Omymah Naveed — Associate Software Engineer and Full Stack Developer specializing in MERN stack, ASP.NET Core and SQL.",
+    "Portfolio of Omymah Naveed — Full Stack Developer specializing in the MERN stack, SQL, ASP.NET Core and modern web technologies.",
 };
 
 export default function RootLayout({

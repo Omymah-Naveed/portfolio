@@ -3,7 +3,7 @@ import { CodeIcon } from "./Icons";
 import { SectionHeading } from "./SectionHeading";
 
 const highlights = [
-  "Full-stack development with the MERN stack",
+  "Full-stack development with the MERN stack and SQL",
   "Clean, scalable REST API architecture",
   "Creative design with Photoshop & Illustrator",
 ];

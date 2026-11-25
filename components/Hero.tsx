@@ -43,7 +43,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-4 text-xl font-semibold text-slate-200 sm:text-2xl">
-            {profile.role} · {profile.tagline}
+            {profile.role}
           </p>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">

@@ -1,15 +1,14 @@
 export const profile = {
   name: "Omymah Naveed",
   firstName: "Omymah",
-  role: "Associate Software Engineer",
-  tagline: "Full Stack Developer",
+  role: "Full Stack Developer",
   location: "Karachi, Pakistan",
   email: "omymahnaveed94@gmail.com",
   linkedin: "https://linkedin.com/in/omymah-naveed-080756274",
   github: "https://github.com/Omymah-Naveed",
   resumePdf: "/Omymah-Naveed.pdf?v=2",
   summary:
-    "Motivated Software Engineering student and Full Stack Developer with a strong creative edge in Adobe Photoshop and Illustrator. Hands-on experience in building scalable web applications using the MERN stack and SQL. Passionate about bridging the gap between clean backend logic, responsive frontend code, and high-quality visual design to deliver impactful user experiences.",
+    "Full Stack Developer with hands-on experience building scalable web applications using the MERN stack and SQL. I build responsive, user-focused frontends alongside reliable backend services and REST APIs, and I bring a strong creative edge in Adobe Photoshop and Illustrator. I bridge the gap between clean backend logic, responsive frontend code, and high-quality visual design to deliver impactful user experiences.",
 };
 
 export type SkillGroup = {
@@ -389,7 +388,7 @@ export const education: Education[] = [
   {
     school: "APTECH North Nazimabad Campus",
     degree: "Advanced Diploma in Software Engineering (ADSE)",
-    period: "2023 - Present",
+    period: "2023 - 2026",
   },
   {
     school: "University of Karachi",
